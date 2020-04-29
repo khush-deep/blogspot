@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block sub_content %}
+<body style="height:600px;background-color:rgb(240,240,240,.5);">
+</body>
+<div class="container" >
+    <h1>
+        {{ blog.title }}
+    </h1><hr/>
+    <p style="font-size:large;">
+        {{ blog.body }}
+    </p>
+</div>
+    
+{% endblock sub_content %}

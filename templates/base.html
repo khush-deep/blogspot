@@ -1,0 +1,33 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block head %}
+    {{ ckeditor.load() }}
+    {{ super() }}
+{% endblock head %}
+    
+{% block styles %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% endblock styles %}
+
+{% block title %} Blogs {% endblock title %}
+
+{% block navbar %} {% include '_navbar.html' %} {% endblock navbar %}
+{% block content %}
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages: %}
+            <ul style="margin-right: 3%;">
+            {% for category,message in messages %}
+                <li class="alert alert-{{category}}">{{message}}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    {% block sub_content %}
+    {% endblock sub_content %}
+{% endblock %}
+
+
+
+
