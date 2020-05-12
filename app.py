@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, flash, session, url_for, redirect
 from flask_bootstrap import Bootstrap
-from flask_sqlalchemy import SQLAlchemy
+# from flask_sqlalchemy import SQLAlchemy
 from flask_ckeditor import CKEditor
 from werkzeug.security import generate_password_hash,check_password_hash
 import os
@@ -10,7 +10,7 @@ Bootstrap(app)
 CKEditor(app)
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']= False
-app.config['SQLALCHEMY_DATABASE_URI']= "mysql+pymysql://khush:1234@localhost/blog_db"
+app.config['SQLALCHEMY_DATABASE_URI']= "mysql+pymysql://username:password@localhost/blog_db"
 app.config['SECRET_KEY'] = os.urandom(24)
 
 db = SQLAlchemy(app)
@@ -29,7 +29,7 @@ class Blog(db.Model):
 
 @app.route('/')
 def index():
-    blogs = Blog.query.order_by(Blog.id).all()
+    # blogs = Blog.query.order_by(Blog.id).all()
     return render_template('index.html',blogs=blogs)
 
 @app.route('/register',methods = ['POST','GET'])
@@ -130,5 +130,5 @@ def del_blog(id):
         return redirect(url_for('index'))
 
 if __name__ == '__main__':
-    db.create_all()
+    # db.create_all()
     app.run(debug=True)
