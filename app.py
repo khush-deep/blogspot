@@ -29,7 +29,7 @@ class Blog(db.Model):
 
 @app.route('/')
 def index():
-    return "No Blogs"
+    return render_template('base.html')
     blogs = Blog.query.order_by(Blog.id).all()
     return render_template('index.html',blogs=blogs)
 
