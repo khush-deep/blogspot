@@ -84,7 +84,7 @@ def my_blogs():
         return render_template('my_blogs.html',blogs=blogs)
     else:
         flash("You need to login first",'info')
-        return redirect(url_for('login'))
+        return render_template('login.html')
     
 @app.route('/write-blog',methods = ['POST','GET'])
 def write_blog():
@@ -93,7 +93,7 @@ def write_blog():
             return render_template('write_blog.html')
         else:
             flash("You have to login first",'info')
-            return redirect(url_for('login'))
+            return render_template('login.html')
     else:
         Form = request.form
         blog = Blog(username=session['username'], title=Form['title'], body=Form['body'])
