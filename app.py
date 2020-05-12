@@ -29,7 +29,8 @@ class Blog(db.Model):
 
 @app.route('/')
 def index():
-    # blogs = Blog.query.order_by(Blog.id).all()
+    return "No Blogs"
+    blogs = Blog.query.order_by(Blog.id).all()
     return render_template('index.html',blogs=blogs)
 
 @app.route('/register',methods = ['POST','GET'])
