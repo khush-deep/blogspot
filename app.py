@@ -10,7 +10,7 @@ Bootstrap(app)
 CKEditor(app)
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']= False
-app.config['SQLALCHEMY_DATABASE_URI']= "mysql+pymysql://username:password@localhost/blog_db"
+app.config['SQLALCHEMY_DATABASE_URI']= "mysql+pymysql://khush:1234@localhost/blog_db"
 app.config['SECRET_KEY'] = os.urandom(24)
 
 db = SQLAlchemy(app)
