@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, flash, session, url_for, redirect
 from flask_bootstrap import Bootstrap
-# from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 from flask_ckeditor import CKEditor
 from werkzeug.security import generate_password_hash,check_password_hash
 import os
