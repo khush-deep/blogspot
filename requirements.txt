@@ -3,3 +3,4 @@ gunicorn
 flask-bootstrap
 flask-sqlalchemy
 flask-ckeditor
+wtforms
