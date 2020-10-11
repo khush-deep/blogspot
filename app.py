@@ -9,7 +9,7 @@ Bootstrap(app)
 URI = os.getenv('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']= False
 app.config['SQLALCHEMY_DATABASE_URI']= URI
-app.config['SECRET_KEY'] = os.urandom(24)
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 db = SQLAlchemy(app)
 
