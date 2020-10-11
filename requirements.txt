@@ -2,5 +2,5 @@ Flask==1.1.2
 Werkzeug==1.0.1
 flask_bootstrap==3.3.7.1
 flask_sqlalchemy==2.4.4
-gunicorn
+# gunicorn
 psycopg2-binary
