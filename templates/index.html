@@ -10,10 +10,10 @@
         {% endif %}
         <div class="col-sm-6" style="display:table-colunn ;" >
           <div class="card">
-            <div class="card-body">
+            <div class="card-body" style="border:1px solid rgba(0,0,0,.125); padding: 20px; border-radius: .5rem;">
               <h4 class="card-title">{{blog.title}}</h4><hr/>
               <p class="card-text">{{blog.body[:130]}}...</p>
-              <a href="/blogs/{{blog.id}}" class="btn btn-primary">Continue reading</a>
+              <a href="/blogs/{{blog.id}}" class="btn btn-primary" style="background-color: #007bff;">Continue reading</a>
             </div>
           </div>
         </div>
