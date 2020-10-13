@@ -1,0 +1,6 @@
+Flask
+Werkzeug
+flask_bootstrap
+flask_sqlalchemy
+gunicorn
+psycopg2-binary

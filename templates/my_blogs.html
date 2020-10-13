@@ -7,13 +7,13 @@
     </div>
     {% if blogs: %}
         {% for blog in blogs %}
-            <div class="card w-50">
-                <div class="card-body">
+            <div class="card w-50" style="max-width: 400px; border-width: 5px;">
+                <div class="card-body" style="border:1px solid rgba(0,0,0,.125); padding: 20px; border-radius: .5rem;">
                     <h5 class="card-title">{{blog.title}}</h5><hr/>
                     <p class="card-text">{{ blog.body[:130] }}...</p>
-                    <a href="/blogs/{{blog.id}}" class="btn btn-primary">View</a>
-                    <a href="/edit-blog/{{blog.id}}" class="btn btn-secondary">Edit</a>
-                    <a href="/delete-blog/{{blog.id}}" class="btn btn-danger">Delete</a>
+                    <a href="/blogs/{{blog.id}}" class="btn btn-primary" style="background-color: #007bff;">View</a>
+                    <a href="/edit-blog/{{blog.id}}" class="btn btn-secondary" style="background-color: #6c757d; color: white;">Edit</a>
+                    <a href="/delete-blog/{{blog.id}}" class="btn btn-danger" style="background-color: #dc3545;">Delete</a>
                 </div>
             </div><br/>
         {% endfor %}
